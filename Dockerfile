@@ -11,10 +11,8 @@ RUN apt-get install -y mc
 RUN apt-get install -y pip
 
 # Install requirements
-COPY requirements.txt /opt/app/requirements.txt
-WORKDIR /opt/app
+COPY requirements.txt /home/requirements.txt
 RUN pip install -r requirements.txt
-COPY . /opt/app
 
 # Set timezone
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install tzdata && \
