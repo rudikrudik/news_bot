@@ -12,7 +12,9 @@ RUN apt-get install -y pip
 
 # Install requirements
 COPY requirements.txt /home/requirements.txt
+WORKDIR /home/
 RUN pip install -r requirements.txt
+COPY . /home/
 
 # Set timezone
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install tzdata && \
