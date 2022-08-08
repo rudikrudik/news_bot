@@ -60,4 +60,4 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             docker exec -d newsbot /usr/bin/python3 /home/main.py
-            docker image prune
+            docker image prune -f
