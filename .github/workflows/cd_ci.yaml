@@ -45,7 +45,7 @@ jobs:
             docker run -dit --name newsbot rudikrudik/newsbot
             docker exec -d newsbot git clone https://github.com/rudikrudik/news_bot.git /home/
             docker exec newsbot /bin/sh -c 'echo "TOKEN = ${{ secrets.TOKEN}}" >> /home/config.ini'
-            docker exec newsbot /bin/sh -c 'echo "CHAT_ID = ${{ secrets.CHAIT_ID}}" >> /home/config.ini'            
+            docker exec newsbot /bin/sh -c 'echo "CHAT_ID = ${{ secrets.CHAT_ID}}" >> /home/config.ini'            
 
   START_APP:
     runs-on: ubuntu-latest
