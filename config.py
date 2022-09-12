@@ -48,7 +48,7 @@ except KeyError:
     config_state = False
 
 
-if config_state == False:
+if config_state:
     simplelog.write_log('Read config.ini => ERROR')
     exit()
 else:
